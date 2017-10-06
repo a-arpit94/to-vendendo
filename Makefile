@@ -45,6 +45,12 @@ migrate:
 run:
 	@python run.py
 
+setup:
+	@$(MAKE) install
+	@$(MAKE) create-db
+	@$(MAKE) upgrade
+	@$(MAKE) test
+
 supermigrate:
 	@$(MAKE) drop-db
 	@$(MAKE) create-db
