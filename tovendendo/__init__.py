@@ -35,7 +35,7 @@ def init_login():
 
 init_login()
 
-admin = Admin(app, name='tovendendo', index_view=AuthenticationView(), template_mode='bootstrap3')
+admin = Admin(app, name='tovendendo', index_view=AuthenticationView(), template_mode='bootstrap3', base_template='mymaster.html')
 admin.add_view(ItemView(Item, db.session))
 admin.add_view(CategoryView(Category, db.session))
 admin.add_view(UserAdminView(User, db.session))
